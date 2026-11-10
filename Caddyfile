@@ -1,0 +1,45 @@
+# Railway (Railpack) uses this file instead of its default web-server settings.
+# It is the same as the default, except that the page may play its own audio
+# (blob: and data: addresses) — the default security policy blocks that.
+{
+	admin off
+	persist_config off
+	auto_https off
+	log {
+		format json
+	}
+	servers {
+		trusted_proxies static private_ranges
+	}
+}
+
+:{$PORT:80} {
+	log {
+		format json
+	}
+	respond /health 200
+	header {
+		X-XSS-Protection "1; mode=block"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Content-Security-Policy "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; connect-src 'self' data: blob: https:; media-src 'self' data: blob: https:; worker-src 'self' blob:; object-src 'none'; frame-src 'self' https:;"
+		-Server
+	}
+	# always check for a newer copy, so replaced audio or text shows up at once
+	header Cache-Control "no-cache"
+	root * {{.StaticFileRoot}}
+	file_server {
+		hide .git
+		hide .env*
+		hide Caddyfile
+	}
+	encode {
+		gzip
+		zstd
+	}
+	try_files {path} {path}.html {path}/index.html
+	handle_errors {
+		rewrite * /{err.status_code}.html
+		file_server
+	}
+}
