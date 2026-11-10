@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ramzan Sugar Mill — HPA Technical &amp; Economic Proposal · Carbo Solutions International</title>
+<title>HPA Technical &amp; Economic Proposal · Carbo Solutions International</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
@@ -166,7 +166,7 @@ header{position:relative;z-index:3;flex:0 0 auto;margin:10px 12px 0;border-radiu
 #voBtn.muted .on{display:none}
 #voBtn.muted .off{display:block}
 #voBtn.muted{opacity:.72}
-#cap{position:absolute;left:calc(min(378px,100% - 40px) + 40px);right:230px;bottom:40px;display:flex;justify-content:center;pointer-events:none;z-index:4;opacity:0;transform:translateY(6px);transition:opacity .28s ease,transform .28s ease}
+#cap{position:absolute;left:20px;right:20px;bottom:40px;display:flex;justify-content:center;pointer-events:none;z-index:4;opacity:0;transform:translateY(6px);transition:opacity .28s ease,transform .28s ease}
 #cap.on{opacity:1;transform:none}
 #cap span{display:inline-block;max-width:680px;padding:9px 16px;border-radius:14px;font-size:15px;line-height:1.45;color:var(--ink);text-align:center;background:var(--glass);border:1px solid var(--edge2);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 6px 24px rgba(40,30,15,.10)}
 @media (max-width:900px){#cap{left:16px;right:16px;bottom:16px}#cap span{font-size:13.5px}}
@@ -194,14 +194,14 @@ h5.voGrp{margin:14px 0 6px;font-family:'Barlow Condensed',sans-serif;font-weight
 .voFn{margin-top:4px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ink3);word-break:break-all}
 
 /* ---------- savings view ---------- */
-html[data-theme="light"]{--savSurf:rgba(252,250,245,.97);--savCard:#FCFAF5;--vGain:#2a78d6;--vCost:#e34948;--vToday:#8a8478;--vGrid:#E7E1D5;--vAxis:#C9C1B2;--vRing:#FCFAF5}
-html[data-theme="dark"]{--savSurf:rgba(16,42,63,.97);--savCard:#102A3F;--vGain:#3987e5;--vCost:#e66767;--vToday:#8899a8;--vGrid:#21405A;--vAxis:#335270;--vRing:#102A3F}
+html[data-theme="light"]{--savSurf:rgba(252,250,245,.50);--savCard:rgba(255,253,248,.46);--savTipBg:#FCFAF5;--vGain:#2a78d6;--vCost:#e34948;--vToday:#8a8478;--vGrid:#E7E1D5;--vAxis:#C9C1B2;--vRing:#FCFAF5}
+html[data-theme="dark"]{--savSurf:rgba(16,42,63,.52);--savCard:rgba(12,40,62,.44);--savTipBg:#102A3F;--vGain:#3987e5;--vCost:#e66767;--vToday:#8899a8;--vGrid:#21405A;--vAxis:#335270;--vRing:#102A3F}
 #savBtn{flex:0 0 auto;cursor:pointer;border:1px solid var(--accent);border-radius:13px;background:var(--accent);color:var(--on-ink);height:38px;padding:0 15px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;transition:.18s;white-space:nowrap}
 #savBtn:hover{filter:brightness(1.08)}
 #savBtn.on{background:transparent;border-color:var(--accent);color:var(--accent-ink)}
 html[data-theme="dark"] #savBtn.on{color:#BFE0FF}
 #savBtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-#sav{position:absolute;inset:74px 20px 20px 20px;z-index:5;display:none;border-radius:22px;background:var(--savSurf);border:1px solid var(--edge2);box-shadow:var(--shadow);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);flex-direction:column;overflow:hidden;color:var(--ink)}
+#sav{position:absolute;inset:74px 20px 20px 20px;z-index:5;display:none;border-radius:22px;background:var(--savSurf);border:1px solid var(--edge2);box-shadow:var(--shadow);-webkit-backdrop-filter:blur(26px) saturate(170%);backdrop-filter:blur(26px) saturate(170%);flex-direction:column;overflow:hidden;color:var(--ink)}
 #sav.on{display:flex;animation:savIn .32s ease}
 @keyframes savIn{from{opacity:0;transform:translateY(10px) scale(.992)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){#sav.on{animation:none}}
@@ -314,7 +314,7 @@ html[data-theme="dark"] .svTbl .hi{color:#BFE0FF}
 .svRec em{font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink)}
 html[data-theme="dark"] .svRec em{color:#BFE0FF}
 .svList{margin:0;padding-left:18px;font-size:12px;line-height:1.6;color:var(--ink2)}
-#savTip{position:fixed;z-index:20;pointer-events:none;padding:7px 10px;border-radius:10px;background:var(--savCard);border:1px solid var(--edge2);box-shadow:var(--shadow);font-size:11.5px;color:var(--ink2);opacity:0;transition:opacity .12s;max-width:260px}
+#savTip{position:fixed;z-index:20;pointer-events:none;padding:7px 10px;border-radius:10px;background:var(--savTipBg);border:1px solid var(--edge2);box-shadow:var(--shadow);font-size:11.5px;color:var(--ink2);opacity:0;transition:opacity .12s;max-width:260px}
 #savTip.on{opacity:1}
 #savTip b{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink);font-weight:500}
 @media (max-width:760px){#sav{inset:66px 8px 8px 8px}.savHead h2{font-size:22px}.wfRow{grid-template-columns:minmax(90px,34%) 1fr 96px}.rgRow{grid-template-columns:76px 1fr 90px}.rgAx{margin:4px 100px 0 90px}}
@@ -333,6 +333,10 @@ html[data-theme="dark"] .svRec em{color:#BFE0FF}
 .srcF{margin:10px 0 0;font-size:12px;line-height:1.5;color:var(--ink2)}
 .srcF b{color:var(--ink);font-weight:600}
 .srcF .mU,.srcI b .mU{display:inline;margin-left:4px}
+
+/* liquid-glass rim on the Savings view and its cards */
+#sav{box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.55)}
+.svCard,.svKpi,.svSrc,.svRec div{-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
 </style>
 </head>
 <body>
@@ -352,7 +356,7 @@ html[data-theme="dark"] .svRec em{color:#BFE0FF}
     <div class="wordmark"><b>CARBO SOLUTIONS</b><span>HIGH TECH SUGAR SOLUTIONS</span></div>
   </div>
   <div class="title">
-    <b>HPA Proposal — Ramzan Sugar Mill Refinery</b>
+    <b>HPA Refinery Proposal</b>
     <span>17,000 TCD · 1,650 TPD refined · 120-day season · CSI study, 8 Oct 2026</span>
   </div>
   <div id="methods" role="tablist" aria-label="Process route">
@@ -479,7 +483,7 @@ html[data-theme="dark"] .svRec em{color:#BFE0FF}
     <div class="savHead">
       <div>
         <div class="ey">CSI Technical &amp; Economic Study · 8 October 2026</div>
-        <h2 id="savTitle">HPA savings for Ramzan Sugar Mill</h2>
+        <h2 id="savTitle">HPA savings</h2>
         <p>17,000 TCD cane · 1,650 TPD refined · 120-day season · 198,000 MT refined sugar per season</p>
       </div>
       <div class="sp"></div>
@@ -503,7 +507,7 @@ html[data-theme="dark"] .svRec em{color:#BFE0FF}
       </div>
     </div>
     <div class="savBody" id="savBody" role="tabpanel"></div>
-    <p class="savFoot">Source: CSI Technical &amp; Economic Study for Ramzan Sugar Mill, 8 October 2026 · 198,000 MT refined sugar per season. Premiums are market opportunities, not guaranteed revenue · CAPEX is preliminary · clarifier elimination and &lt;190 IU are subject to plant validation · prices are reference assumptions until Ramzan confirms them.</p>
+    <p class="savFoot">Source: CSI Technical &amp; Economic Study, 8 October 2026 · 198,000 MT refined sugar per season. Premiums are market opportunities, not guaranteed revenue · CAPEX is preliminary · clarifier elimination and &lt;190 IU are subject to plant validation · prices are reference assumptions until the mill confirms them.</p>
   </section>
   <div id="savTip" role="tooltip"></div>
   <div id="key" class="glass"><h4>Liquor colour</h4><div id="keyRows"></div></div>
@@ -572,7 +576,7 @@ function setLiq(k,hex){
 
 /* ============ CONTENT ============ */
 const STAGES_NEW=[
- {no:'00',name:'Overview',accent:'#1B75BB',title:'Ramzan refinery without the Talo clarifier',
+ {no:'00',name:'Overview',accent:'#1B75BB',title:'The refinery without the Talo clarifier',
   sub:'HPA + FA-10 replace clarification · 1,650 TPD refined',
   body:'Strategies 1 and 3 of the CSI study bypass the Talo clarifier. The five clarification chemicals — phosphoric acid, lime, decolorizer, FRS-W2 and flocculant — are replaced by <em>HPA adsorption followed by membrane-press filtration</em> with FA-10 filter aid. At 500 ppm HPA (Strategy 1) the fine liquor stays at today’s ≈350 IU at lower cost. At 800 ppm (Strategy 3) the target is below 190 IU and premium R1–R3 sugar.',
   mets:[['$300,417','Strategy 1 saving / season'],['$2.28–3.27M','Strategy 3 net / season'],['$280–320k','Preliminary CAPEX'],['1.0–1.7 months','Strategy 3 payback']],
@@ -622,7 +626,7 @@ const STAGES_NEW=[
 ];
 
 const STAGES_OLD=[
- {no:'00',name:'Overview',accent:'#1B75BB',title:'Ramzan refinery today: Talo clarification',
+ {no:'00',name:'Overview',accent:'#1B75BB',title:'The refinery today: Talo clarification',
   sub:'Phosphatation · five clarification chemicals · 1,650 TPD',
   body:'Raw melt at 650 IU is clarified by <em>phosphatation and flotation</em> in a Talo clarifier, using five chemicals: phosphoric acid, lime saccharate, decolorizer, FRS-W2 and flocculant. The clarifier brings colour only to 375 IU, and the deep bed filters finish at 350 IU fine liquor. Sugar comes off at R1 25–35, R2 45–50 and R3 65–70 IU.',
   mets:[['$324,177','Chemical spend / season'],['$1.654/MT','Chemical cost per tonne'],['$209,880','Clarifier running cost / season'],['350 IU','Fine liquor colour']],
@@ -2876,7 +2880,7 @@ function go(i){
   if(chipEls[i]) chipEls[i].scrollIntoView({block:'nearest',inline:'center'});
   panel.classList.add('hide');
   setTimeout(function(){
-    pNo.textContent=i===0?(method==='new'?'Ramzan · HPA proposal':'Ramzan · current process'):('Stage '+s.no+' of 09');
+    pNo.textContent=i===0?(method==='new'?'HPA proposal':'Current process'):('Stage '+s.no+' of 09');
     pTitle.textContent=s.title; pSub.textContent=s.sub; pBody.innerHTML=s.body;
     paintMets(s);
     if(s.gap){ pGap.style.display='block'; pGapT.textContent=s.gap; } else pGap.style.display='none';
@@ -2905,7 +2909,7 @@ function stopTour(){
 
 /* ============ EDITABLE INTERFACE STRINGS ============ */
 const TXT={
-  hTitle:'HPA Proposal — Ramzan Sugar Mill Refinery',
+  hTitle:'HPA Refinery Proposal',
   hSub:'17,000 TCD · 1,650 TPD refined · 120-day season · CSI study, 8 Oct 2026',
   mOld:'Talo Refinery',
   mNew:'Talo-less HPA Refinery',
@@ -4233,7 +4237,7 @@ const RZ={
 /* ============ SAVINGS VIEW ============ */
 const SAV={tab:'over',margin:10,pkr:false,rate:280,open:false};
 const SAV_CLIP={over:'sav-00',s1:'sav-s1',s2:'sav-s2',s3:'sav-s3',next:'sav-next'};
-const SAV_TITLE={over:'Where Ramzan’s savings come from',s1:'Strategy 1 — eliminate clarifier, HPA 500 ppm',s2:'Strategy 2 — keep clarifier, add HPA 500 ppm',s3:'Strategy 3 — eliminate clarifier, HPA 800 ppm',next:'Recommendation and next steps'};
+const SAV_TITLE={over:'Where the savings come from',s1:'Strategy 1 — eliminate clarifier, HPA 500 ppm',s2:'Strategy 2 — keep clarifier, add HPA 500 ppm',s3:'Strategy 3 — eliminate clarifier, HPA 800 ppm',next:'Recommendation and next steps'};
 const savEl=document.getElementById('sav'), savBody=document.getElementById('savBody'), savBtn=document.getElementById('savBtn'), savTip=document.getElementById('savTip');
 function esc(t){ return String(t).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 function usd(v,compact){
@@ -4329,13 +4333,13 @@ function sourcesCard(){
            ['2','No clarifier to run',money(RZ.opexTotal),'Steam, water, power, maintenance, labour, waste handling, cleaning, spares','Strategies 1 and 3'],
            ['3','Lower colour',money(RZ.fine.v),'Fine liquor 350 → below 190 IU: less water, steam and sucrose loss','Strategies 2 and 3 · modeled'],
            ['4','Premium sugar',moneyRange(RZ.premium[10],RZ.premium[15]),'$10–15 more per tonne on 198,000 MT of R1–R3','Strategies 2 and 3 · not guaranteed']];
-  return '<div class="svSrc"><div class="srcHd"><b>Where Ramzan’s savings come from</b><span>Per season, from the study</span></div><div class="srcG">'+
+  return '<div class="svSrc"><div class="srcHd"><b>Where the savings come from</b><span>Per season, from the study</span></div><div class="srcG">'+
     S.map(function(x){ return '<div class="srcI"><i aria-hidden="true">'+x[0]+'</i><em>'+x[1]+'</em><b>'+x[2]+'</b><span>'+x[3]+'</span><small>'+x[4]+'</small></div>'; }).join('')+
     '</div><p class="srcF">Added up: <b>Strategy 1</b> (1 + 2) = <b>'+money(RZ.s1.total)+'</b> a season. <b>Strategy 3</b> (2 + 3 + 4, with HPA at 800 ppm in place of the chemicals) = <b>'+moneyRange(RZ.net.s3[10],RZ.net.s3[15])+'</b> a season.</p></div>';
 }
 function renderOver(){
   const m=SAV.margin;
-  return sourcesCard()+'<p class="svLede">The study compares Ramzan’s current Talo process with <b>three HPA strategies</b> on 198,000 MT of refined sugar per season. Strategy 1 cuts cost at today’s colour; Strategies 2 and 3 target premium sugar.</p>'+
+  return sourcesCard()+'<p class="svLede">The study compares the current Talo process with <b>three HPA strategies</b> on 198,000 MT of refined sugar per season. Strategy 1 cuts cost at today’s colour; Strategies 2 and 3 target premium sugar.</p>'+
     '<div class="svKpis">'+kpi(money(RZ.s1.total),'Strategy 1 · saving / season')+kpi(money(RZ.net.s2[m],1),'Strategy 2 · net / season at $'+m+'/MT')+
     kpi(money(RZ.net.s3[m],1),'Strategy 3 · net / season at $'+m+'/MT',1)+kpi(moneyRange(RZ.capex[0],RZ.capex[1]),'Preliminary CAPEX · each strategy')+'</div>'+
     '<div class="svGrid">'+card('Net benefit per season','Bar shows the study’s range for a $10–15/MT premium; the dot marks the selected premium.',rangeChart())+
@@ -4395,14 +4399,14 @@ function renderNext(){
     ['Phase 4 — Strategy 3','Bypass Talo; HPA 800 ppm + FA-10 250 ppm. Target <190 IU and premium R1/R2/R3.'],
     ['Phase 5 — Optimisation','If Strategy 3 stays above 190 IU, optimise HPA dose, contact time and filtration before final design.'],
     ['Phase 6 — Permanent conversion','Remove the clarifier permanently only after stable quality, filtration, capacity and economics are shown.']];
-  const N=[['Execute a mutual NDA','CSI + Ramzan'],['CSI site visit and process / flow audit','CSI Engineering'],['Verify Talo hydraulic data and filtration capacity','CSI + Ramzan'],['Run the Strategies 1–3 HPA trial programme','CSI + Ramzan'],['Issue the final technical and commercial proposal','CSI']];
+  const N=[['Execute a mutual NDA','CSI + mill team'],['CSI site visit and process / flow audit','CSI Engineering'],['Verify Talo hydraulic data and filtration capacity','CSI + mill team'],['Run the Strategies 1–3 HPA trial programme','CSI + mill team'],['Issue the final technical and commercial proposal','CSI']];
   return '<div class="svRec"><div class="pick"><em>Recommended first</em><b>Strategy 2</b>The lower-risk premium-sugar route: the Talo clarifier stays in operation while HPA brings fine liquor toward &lt;190 IU.</div>'+
     '<div><em>Then migrate to</em><b>Strategy 3</b>The preferred long-term Total Cost of Ownership route, once the plant trial confirms stable premium sugar quality.</div>'+
     '<div><em>Validation route</em><b>Strategy 1</b>The first clarifier-elimination test: same ≈350 IU fine liquor with no clarification chemicals.</div></div>'+
     '<div class="svGrid">'+card('Trial and implementation plan','From the study, section 17.','<div class="svScroll"><table class="svTbl"><tbody>'+P.map(function(p){ return '<tr><td style="white-space:nowrap">'+p[0]+'</td><td>'+esc(p[1])+'</td></tr>'; }).join('')+'</tbody></table></div>')+
     card('Next steps','From the study, section 20.2.','<div class="svScroll"><table class="svTbl"><thead><tr><th>#</th><th>Action</th><th>Lead</th></tr></thead><tbody>'+N.map(function(n,i){ return '<tr><td>'+(i+1)+'</td><td>'+n[0]+'</td><td style="white-space:nowrap">'+n[1]+'</td></tr>'; }).join('')+'</tbody></table></div>'+
       '<p class="svNote"><b>Total Cost of Ownership</b> = CAPEX + OPEX + hidden and indirect operating costs − the economic benefits the technology generates. HPA is judged on the cost of each tonne of sugar, not on chemical price alone.</p>')+
-    card('Commercial assumptions','From the study, section 20.','<ul class="svList"><li>Seasonal basis: 120 operating days and 198,000 MT refined sugar.</li><li>HPA $2.00/kg and FA-10 $0.72/kg, and current chemical prices, are reference assumptions until Ramzan provides actual prices.</li><li>CAPEX of $280,000–320,000 is preliminary and subject to site engineering.</li><li>Premium margins of $10–15/MT are market opportunities, not guaranteed revenue.</li><li>The fine-liquor benefit uses 190 IU as a conservative threshold and is a theoretical model result, not a guaranteed cash saving.</li><li>Premium R1/R2/R3 colours are trial targets and require validation.</li><li>An NDA is required before detailed engineering or full technical disclosure.</li></ul>')+'</div>';
+    card('Commercial assumptions','From the study, section 20.','<ul class="svList"><li>Seasonal basis: 120 operating days and 198,000 MT refined sugar.</li><li>HPA $2.00/kg and FA-10 $0.72/kg, and current chemical prices, are reference assumptions until the mill provides actual prices.</li><li>CAPEX of $280,000–320,000 is preliminary and subject to site engineering.</li><li>Premium margins of $10–15/MT are market opportunities, not guaranteed revenue.</li><li>The fine-liquor benefit uses 190 IU as a conservative threshold and is a theoretical model result, not a guaranteed cash saving.</li><li>Premium R1/R2/R3 colours are trial targets and require validation.</li><li>An NDA is required before detailed engineering or full technical disclosure.</li></ul>')+'</div>';
 }
 const SAV_RENDER={over:renderOver,s1:renderS1,s2:renderS2,s3:renderS3,next:renderNext};
 function savRender(){
@@ -4467,47 +4471,68 @@ savBody.addEventListener('focusin',function(e){ const el=e.target.closest('[data
 savBody.addEventListener('focusout',function(){ savTip.classList.remove('on'); });
 
 /* the savings view is HTML, so a recorded video gets its own drawn version */
+/* Savings for the video: a compact liquid-glass card on the left, so the
+   animation stays visible behind and beside it. Laid out first, then drawn. */
 function drawSavingsRec(g,W,H){
-  const m=SAV.margin, t=SAV.tab, pad=Math.round(W*0.035), x=Math.round(W*0.30), y=Math.round(H*0.11), w=W-x-pad, h=Math.round(H*0.72);
-  const ink=dark?'#FFFFFF':'#2B2318', ink2=dark?'#B4CBDD':'#5E5344', gain=dark?'#3987e5':'#2a78d6', cost=dark?'#e66767':'#e34948';
-  g.save();
-  g.fillStyle=dark?'rgba(16,42,63,0.93)':'rgba(252,250,245,0.95)'; g.strokeStyle=dark?'rgba(255,255,255,0.18)':'rgba(90,72,48,0.16)'; g.lineWidth=2;
-  rr(g,x,y,w,h,Math.round(W*0.012)); g.fill(); g.stroke();
-  const fx=x+Math.round(W*0.022); let fy=y+Math.round(H*0.065);
-  g.fillStyle=ink2; g.font='500 '+Math.round(W*0.0095)+'px "IBM Plex Mono", monospace'; g.fillText('RAMZAN SUGAR MILL · HPA SAVINGS PER SEASON',fx,fy);
-  fy+=Math.round(H*0.06); g.fillStyle=ink; g.font='600 '+Math.round(W*0.024)+'px "Barlow Condensed", sans-serif'; g.fillText(SAV_TITLE[t],fx,fy);
-  fy+=Math.round(H*0.05);
+  const m=SAV.margin, t=SAV.tab, pad=Math.round(W*0.03), ip=Math.round(W*0.016);
+  const x=pad, y=pad+Math.round(W*0.026), w=Math.round(W*0.36), iw=w-ip*2;
+  const ink=dark?'#FFFFFF':'#1E1912', ink2=dark?'#B4CBDD':'#4E4436', gain=dark?'#5AA0F0':'#1F6FCF', cost=dark?'#F08080':'#D63A39';
+  const fE=Math.round(W*0.0080), fT=Math.round(W*0.0205), fR=Math.round(W*0.0108), fV=Math.round(W*0.0122), fN=Math.round(W*0.0080), fF=Math.round(W*0.0072);
+  const ops=[]; let cy=0;
+  function T(s,font,col,dx,base,align,maxW){ ops.push({k:'t',s:s,font:font,col:col,x:dx,y:base,a:align||'left',mw:maxW||0}); }
+  function B(x0,x1,yy,hh,col){ ops.push({k:'b',x0:x0,x1:x1,y:yy,h:hh,col:col}); }
+  cy+=fE; T('HPA SAVINGS PER SEASON','500 |'+fE+'|px "IBM Plex Mono", monospace',ink2,0,cy);
+  cy+=Math.round(fT*1.3); T(SAV_TITLE[t],'600 |'+fT+'|px "Barlow Condensed", sans-serif',ink,0,cy,'left',iw);
+  cy+=Math.round(W*0.010);
   let rows=null;
   if(t==='s1') rows=[['Clarification chemicals eliminated',RZ.chemTotal],['HPA + FA-10 at 500 ppm',-RZ.sys500],['Clarifier running cost removed',RZ.opexTotal],['= Combined saving',RZ.s1.total]];
   if(t==='s2') rows=[['Premium sugar revenue ($'+m+'/MT)',RZ.premium[m]],['Fine-liquor benefit',RZ.fine.v],['Existing clarification chemicals',-RZ.chemTotal],['HPA + FA-10 at 500 ppm',-RZ.sys500],['= Net annual benefit',RZ.net.s2[m]]];
   if(t==='s3') rows=[['Premium sugar revenue ($'+m+'/MT)',RZ.premium[m]],['Fine-liquor benefit',RZ.fine.v],['Clarification chemicals eliminated',RZ.chemTotal],['Clarifier running cost removed',RZ.opexTotal],['HPA + FA-10 at 800 ppm',-RZ.sys800],['= Net annual benefit',RZ.net.s3[m]]];
   if(rows){
-    let run=0, mx=0; rows.forEach(function(r){ if(r[0].charAt(0)!=='='){ run+=r[1]; } mx=Math.max(mx,run,Math.abs(r[1])); });
-    const lw=Math.round(w*0.40), bw=Math.round(w*0.38), rh=Math.round(H*0.075); run=0;
-    rows.forEach(function(r,i){
+    let run=0, mx=0; rows.forEach(function(r){ if(r[0].charAt(0)!=='=') run+=r[1]; mx=Math.max(mx,run,Math.abs(r[1])); });
+    const bh=Math.max(4,Math.round(W*0.0042)); run=0;
+    rows.forEach(function(r){
       const tot=r[0].charAt(0)==='=', a=tot?0:run, b=tot?r[1]:run+r[1]; if(!tot) run=b;
-      const yy=fy+i*rh, lo=Math.min(a,b), hi=Math.max(a,b);
-      g.fillStyle=tot?ink:ink2; g.font=(tot?'600 ':'500 ')+Math.round(W*0.0115)+'px Inter, sans-serif'; g.fillText(r[0],fx,yy+rh*0.55);
-      g.fillStyle=r[1]<0?cost:gain; rr(g,fx+lw+lo/mx*bw,yy+rh*0.25,Math.max(2,(hi-lo)/mx*bw),rh*0.42,4); g.fill();
-      g.fillStyle=ink; g.font='500 '+Math.round(W*0.0125)+'px "IBM Plex Mono", monospace'; g.textAlign='right';
-      g.fillText((tot?'= ':(r[1]<0?'− ':'+ '))+usd(Math.abs(r[1])),x+w-Math.round(W*0.02),yy+rh*0.55); g.textAlign='left';
+      cy+=Math.round(fR*1.9);
+      T(tot?r[0].slice(2):r[0],(tot?'700 |':'500 |')+fR+'|px Inter, sans-serif',tot?ink:ink2,0,cy,'left',iw*0.66);
+      T((tot?'':(r[1]<0?'− ':'+ '))+usd(Math.abs(r[1])),'600 |'+fV+'|px "IBM Plex Mono", monospace',tot?ink:(r[1]<0?cost:gain),iw,cy,'right');
+      cy+=Math.round(fR*0.55);
+      B(0,iw,cy,bh,dark?'rgba(255,255,255,0.14)':'rgba(60,45,25,0.12)');
+      B(Math.min(a,b)/mx*iw,Math.max(a,b)/mx*iw,cy,bh,r[1]<0?cost:gain);
+      cy+=bh;
     });
   } else if(t==='over'){
-    [['1  Chemicals',RZ.s1.chemSave,'500 ppm'],['2  No clarifier to run',RZ.opexTotal,''],['3  Lower colour',RZ.fine.v,'modeled'],['4  Premium sugar',null,'$10–15/MT']].forEach(function(k,i){
-      const yy=fy+i*Math.round(H*0.085);
-      g.fillStyle=ink; g.font='600 '+Math.round(W*0.0145)+'px Inter, sans-serif'; g.fillText(k[0],fx,yy+Math.round(H*0.04));
-      g.fillStyle=ink2; g.font='500 '+Math.round(W*0.0095)+'px Inter, sans-serif'; g.fillText(k[2],fx+Math.round(w*0.42),yy+Math.round(H*0.04));
-      g.fillStyle=gain; g.font='600 '+Math.round(W*0.0165)+'px Inter, sans-serif'; g.textAlign='right';
-      g.fillText(k[1]===null?usd(RZ.premium[10],1)+' – '+usd(RZ.premium[15],1):usd(k[1]),x+w-Math.round(W*0.02),yy+Math.round(H*0.04)); g.textAlign='left'; });
-    g.fillStyle=ink; g.font='600 '+Math.round(W*0.0125)+'px Inter, sans-serif';
-    g.fillText('Strategy 1: '+usd(RZ.s1.total)+' a season  ·  Strategy 3: '+usd(RZ.net.s3[10],1)+' – '+usd(RZ.net.s3[15],1),fx,fy+4*Math.round(H*0.085)+Math.round(H*0.035));
+    [['1  Chemicals',usd(RZ.s1.chemSave),'at 500 ppm'],['2  No clarifier to run',usd(RZ.opexTotal),'steam, water, power, labour, upkeep'],
+     ['3  Lower colour',usd(RZ.fine.v),'modelled: water, steam, sucrose loss'],['4  Premium sugar',usd(RZ.premium[10],1)+' – '+usd(RZ.premium[15],1),'$10–15 per tonne']].forEach(function(k){
+      cy+=Math.round(fR*2.3);
+      T(k[0],'600 |'+Math.round(fR*1.12)+'|px Inter, sans-serif',ink,0,cy,'left',iw*0.6);
+      T(k[1],'700 |'+Math.round(fV*1.12)+'|px Inter, sans-serif',gain,iw,cy,'right');
+      cy+=Math.round(fN*1.6); T(k[2],'500 |'+fN+'|px Inter, sans-serif',ink2,Math.round(fR*1.5),cy,'left',iw*0.62);
+    });
+    cy+=Math.round(fR*2.4); T('Strategy 1 · '+usd(RZ.s1.total)+' a season','700 |'+fR+'|px Inter, sans-serif',ink,0,cy,'left',iw);
+    cy+=Math.round(fR*1.6); T('Strategy 3 · '+usd(RZ.net.s3[10],1)+' – '+usd(RZ.net.s3[15],1)+' a season','700 |'+fR+'|px Inter, sans-serif',ink,0,cy,'left',iw);
   } else {
+    g.save();
     ['1. Start with Strategy 2 — the lower-risk premium route','2. Move to Strategy 3 once the trial confirms premium quality','3. Strategy 1 — first clarifier-elimination validation','Next: NDA · site audit · Talo & filtration data · trial · final proposal'].forEach(function(s,i){
-      g.fillStyle=i===3?ink2:ink; g.font=(i===3?'500 ':'600 ')+Math.round(W*(i===3?0.0115:0.0145))+'px Inter, sans-serif';
-      g.fillText(s,fx,fy+i*Math.round(H*0.085)+Math.round(H*0.03)); });
+      const f=(i===3?'500 ':'600 ')+Math.round(i===3?fN*1.25:fR*1.08)+'px Inter, sans-serif'; g.font=f;
+      cy+=Math.round(W*(i===3?0.010:0.013));
+      wrapLines(g,s,iw).forEach(function(l,j){ cy+=Math.round((i===3?fN*1.25:fR*1.08)*(j?1.35:1.4)); T(l,f.replace(/(\d+)px/,'|$1|px'),i===3?ink2:ink,0,cy); });
+    });
+    g.restore();
   }
-  g.fillStyle=ink2; g.font='500 '+Math.round(W*0.0085)+'px Inter, sans-serif';
-  g.fillText('CSI Technical & Economic Study, 8 Oct 2026 · premiums not guaranteed · subject to plant validation',fx,y+h-Math.round(H*0.03));
+  g.save(); const fFont='500 '+fF+'px Inter, sans-serif'; g.font=fFont; cy+=Math.round(W*0.016);
+  wrapLines(g,'CSI Technical & Economic Study, 8 Oct 2026 · premiums not guaranteed · subject to plant validation',iw).forEach(function(l){ cy+=Math.round(fF*1.45); T(l,'500 |'+fF+'|px Inter, sans-serif',ink2,0,cy); });
+  g.restore();
+  const h=cy+ip+Math.round(ip*0.4);
+  g.save();
+  glassPanel(g,x,y,w,h,Math.round(W*0.012),W);
+  glassInk(g,W); g.textBaseline='alphabetic';
+  ops.forEach(function(o){
+    if(o.k==='b'){ g.fillStyle=o.col; rr(g,x+ip+o.x0,y+ip+o.y,Math.max(o.h,o.x1-o.x0),o.h,o.h/2); g.fill(); return; }
+    const p=o.font.split('|');                      /* "weight |size|px family" so the size can shrink to fit */
+    if(o.mw) fitFont(g,o.s,p[0],parseInt(p[1],10),p[2],o.mw); else g.font=p[0]+p[1]+p[2];
+    g.fillStyle=o.col; g.textAlign=o.a; g.fillText(o.s,x+ip+o.x,y+ip+o.y);
+  });
   g.restore();
 }
 
@@ -4526,56 +4551,100 @@ function fitFont(g,t,pre,px,post,maxW){
   g.font=pre+px+post; const w=g.measureText(t).width;
   if(w>maxW) g.font=pre+Math.max(Math.round(px*0.6),Math.floor(px*maxW/w))+post;
 }
-function drawCaption(g,W,H){
-  const s=STAGES[Math.max(0,cur)], pad=Math.round(W*0.035);
-  const cw=Math.round(W*0.42), lh=Math.round(W*0.0125);
-  const words=(s.sub||'').toString();
-  const bh=Math.round(W*0.168);
-  g.save();
-  g.fillStyle=dark?'rgba(8,32,54,0.80)':'rgba(255,252,246,0.86)';
-  g.strokeStyle=dark?'rgba(255,255,255,0.18)':'rgba(90,72,48,0.16)'; g.lineWidth=2;
-  rr(g,pad,H-pad-bh,cw,bh,Math.round(W*0.014)); g.fill(); g.stroke();
-  const ax=pad+Math.round(W*0.026), ay=H-pad-bh+Math.round(W*0.028);
-  const acc=(s.accent.charAt(0)==='#')?s.accent:LIQ[s.accent];
-  g.fillStyle=acc; g.fillRect(ax,ay-Math.round(lh*0.7),Math.round(W*0.028),4);
-  g.fillStyle=dark?'#8FC8EA':'#6B5B44';
-  g.font='500 '+Math.round(W*0.0105)+'px "IBM Plex Mono", monospace';
-  g.fillText(('Stage '+s.no+' of 09').toUpperCase(),ax+Math.round(W*0.037),ay);
-  g.fillStyle=dark?'#FFFFFF':'#2B2318';
-  const maxW=cw-(ax-pad)*2;
-  fitFont(g,s.title,'600 ',Math.round(W*0.026),'px "Barlow Condensed", sans-serif',maxW);
-  g.fillText(s.title,ax,ay+Math.round(W*0.032));
-  g.fillStyle=acc;
-  fitFont(g,words,'600 ',Math.round(W*0.0115),'px Inter, sans-serif',maxW);
-  g.fillText(words,ax,ay+Math.round(W*0.055));
-  g.font='500 '+Math.round(W*0.0135)+'px "IBM Plex Mono", monospace';
-  s.mets.slice(0,4).forEach(function(m,i){
-    const mx=ax+(i%2)*Math.round(cw*0.46), my=ay+Math.round(W*0.082)+Math.floor(i/2)*Math.round(W*0.026);
-    g.fillStyle=dark?'#FFFFFF':'#2B2318'; g.fillText(m[0],mx,my);
-    g.fillStyle=dark?'#7E96AA':'#8B8072';
-    g.font='500 '+Math.round(W*0.0085)+'px Inter, sans-serif';
-    g.fillText(m[1].toUpperCase(),mx,my+Math.round(W*0.012));
-    g.font='500 '+Math.round(W*0.0135)+'px "IBM Plex Mono", monospace';
-  });
-  g.fillStyle=dark?'rgba(255,255,255,0.72)':'rgba(43,35,24,0.62)';
-  g.font='700 '+Math.round(W*0.0125)+'px "Barlow Condensed", sans-serif';
-  g.fillText('CARBO SOLUTIONS INTERNATIONAL · RAMZAN SUGAR MILL · '+(method==='new'?TXT.mNew:TXT.mOld).toUpperCase(),pad,pad+Math.round(W*0.012));
+/* ---------- liquid-glass panels for the video ----------
+   Every frame keeps a small, blurred, saturated copy of the picture. A panel
+   shows that copy through a light tint with a bright rim, so the animation
+   stays visible — softly moving — behind every card. */
+const glassC=document.createElement('canvas'), glassX=glassC.getContext('2d'), GLASS_K=0.1;
+function glassPrep(W,H){
+  const w=Math.max(8,Math.round(W*GLASS_K)), h=Math.max(8,Math.round(H*GLASS_K));
+  if(glassC.width!==w||glassC.height!==h){ glassC.width=w; glassC.height=h; }
+  glassX.filter='blur(1.4px) saturate(1.6)';          /* ignored where unsupported; the downscale still blurs */
+  glassX.drawImage(recCv,0,0,w,h);
+  glassX.filter='none';
+}
+function glassPanel(g,x,y,w,h,r,W){
+  const lw=Math.max(1.5,W/900);
+  g.save();                                             /* soft shadow, cast from a shape drawn off-canvas */
+  g.shadowColor=dark?'rgba(0,0,0,0.40)':'rgba(46,34,18,0.20)'; g.shadowBlur=Math.round(W*0.02);
+  g.shadowOffsetX=20000; g.shadowOffsetY=Math.round(W*0.004);
+  g.fillStyle='#000'; rr(g,x-20000,y,w,h,r); g.fill();
+  g.restore();
+  g.save(); rr(g,x,y,w,h,r); g.clip();                  /* frosted view of the animation */
+  g.imageSmoothingEnabled=true; g.imageSmoothingQuality='high';
+  const k=glassC.width/recCv.width;
+  g.drawImage(glassC,x*k,y*k,w*k,h*k,x,y,w,h);
+  g.fillStyle=dark?'rgba(10,30,48,0.44)':'rgba(255,255,255,0.42)'; g.fillRect(x,y,w,h);
+  const sh=g.createLinearGradient(x,y,x,y+h);
+  sh.addColorStop(0,dark?'rgba(255,255,255,0.10)':'rgba(255,255,255,0.34)'); sh.addColorStop(0.5,'rgba(255,255,255,0)');
+  g.fillStyle=sh; g.fillRect(x,y,w,h);
+  g.restore();
+  g.save();                                             /* bright rim, strongest along the top edge */
+  const rim=g.createLinearGradient(x,y,x,y+h);
+  rim.addColorStop(0,dark?'rgba(255,255,255,0.50)':'rgba(255,255,255,0.95)');
+  rim.addColorStop(1,dark?'rgba(255,255,255,0.10)':'rgba(255,255,255,0.40)');
+  g.strokeStyle=rim; g.lineWidth=lw; rr(g,x+lw/2,y+lw/2,w-lw,h-lw,r); g.stroke();
+  g.strokeStyle=dark?'rgba(0,0,0,0.28)':'rgba(60,45,25,0.13)'; g.lineWidth=1; rr(g,x-0.5,y-0.5,w+1,h+1,r+0.5); g.stroke();
   g.restore();
 }
-/* spoken caption, bottom right, clear of the stage card on the left */
+/* a faint halo keeps text readable over a busy background */
+function glassInk(g,W){ g.shadowColor=dark?'rgba(0,0,0,0.55)':'rgba(255,255,255,0.80)'; g.shadowBlur=Math.max(2,Math.round(W*0.0022)); }
+function wrapLines(g,t,maxW){
+  const words=String(t).split(/\s+/), out=[]; let ln='';
+  words.forEach(function(w){ const tr=ln?ln+' '+w:w; if(g.measureText(tr).width>maxW&&ln){ out.push(ln); ln=w; } else ln=tr; });
+  if(ln) out.push(ln); return out;
+}
+/* brand line, top left */
+function drawBrandRec(g,W,H){
+  const pad=Math.round(W*0.03);
+  g.save(); glassInk(g,W);
+  g.fillStyle=dark?'rgba(255,255,255,0.82)':'rgba(43,35,24,0.72)';
+  g.font='700 '+Math.round(W*0.0115)+'px "Barlow Condensed", sans-serif';
+  g.fillText(('Carbo Solutions International · '+(method==='new'?TXT.mNew:TXT.mOld)).toUpperCase(),pad,pad+Math.round(W*0.011));
+  g.restore();
+}
+/* stage card, top left, sized to its content */
+function drawCaption(g,W,H){
+  const s=STAGES[Math.max(0,cur)], pad=Math.round(W*0.03), ip=Math.round(W*0.014), bar=Math.max(3,Math.round(W*0.0022));
+  const acc=(s.accent.charAt(0)==='#')?s.accent:LIQ[s.accent];
+  const fT=Math.round(W*0.0235), fS=Math.round(W*0.0102), fV=Math.round(W*0.0128), fL=Math.round(W*0.0078);
+  const mets=s.mets.slice(0,4), rows=Math.ceil(mets.length/2), mRow=Math.round(W*0.029);
+  g.save();
+  g.font='600 '+fT+'px "Barlow Condensed", sans-serif'; const tw=g.measureText(s.title).width;
+  g.font='600 '+fS+'px Inter, sans-serif'; const sw=g.measureText(s.sub||'').width;
+  const tx0=ip+bar+Math.round(W*0.008);
+  const cw=Math.round(Math.min(W*0.34,Math.max(W*0.25,Math.max(tw,sw)+tx0+ip)));
+  const maxW=cw-tx0-ip;
+  const ch=ip+Math.round(fT*1.0)+Math.round(fS*1.7)+(rows?Math.round(W*0.006)+rows*mRow:0)+Math.round(ip*0.6);
+  const x=pad, y=pad+Math.round(W*0.026), tx=x+tx0;
+  glassPanel(g,x,y,cw,ch,Math.round(W*0.012),W);
+  g.fillStyle=acc; rr(g,x+ip,y+ip,bar,ch-ip*2,bar/2); g.fill();
+  glassInk(g,W);
+  let yy=y+ip+Math.round(fT*0.80);
+  g.fillStyle=dark?'#FFFFFF':'#1E1912'; fitFont(g,s.title,'600 ',fT,'px "Barlow Condensed", sans-serif',maxW); g.fillText(s.title,tx,yy);
+  yy+=Math.round(fS*1.7);
+  g.fillStyle=dark?'#8FC8EA':acc; fitFont(g,s.sub||'','600 ',fS,'px Inter, sans-serif',maxW); g.fillText(s.sub||'',tx,yy);
+  yy+=Math.round(W*0.006);
+  const colW=Math.round(maxW/2);
+  mets.forEach(function(m,i){
+    const mx=tx+(i%2)*colW, my=yy+Math.floor(i/2)*mRow+fV;
+    g.fillStyle=dark?'#FFFFFF':'#2B2318'; fitFont(g,m[0],'500 ',fV,'px "IBM Plex Mono", monospace',colW-Math.round(W*0.006)); g.fillText(m[0],mx,my);
+    g.fillStyle=dark?'#A9C0D3':'#5E5344'; fitFont(g,String(m[1]).toUpperCase(),'600 ',fL,'px Inter, sans-serif',colW-Math.round(W*0.006));
+    g.fillText(String(m[1]).toUpperCase(),mx,my+Math.round(fL*1.6));
+  });
+  g.restore();
+}
+/* spoken caption, bottom centre, on glass */
 function drawSubtitle(g,W,H,t){
-  const pad=Math.round(W*0.035), x0=Math.round(W*0.49), mw=W-pad-x0, fs=Math.round(W*0.0145), lh=Math.round(fs*1.38);
+  const fs=Math.round(W*0.0155), lh=Math.round(fs*1.36), mw=Math.round(W*0.62), px=Math.round(fs*1.1), py=Math.round(fs*0.55);
   g.save(); g.font='500 '+fs+'px Inter, sans-serif';
-  const words=t.split(/\s+/), lines=[]; let ln='';
-  words.forEach(function(w){ const tr=ln?ln+' '+w:w; if(g.measureText(tr).width>mw-fs*1.6&&ln){ lines.push(ln); ln=w; } else ln=tr; });
-  if(ln) lines.push(ln);
-  const bw=Math.min(mw,Math.max.apply(null,lines.map(function(l){ return g.measureText(l).width; }))+fs*1.6),
-        bh=lines.length*lh+fs*1.0, bx=W-pad-bw, by=H-pad-bh;
-  g.fillStyle=dark?'rgba(8,32,54,0.82)':'rgba(255,252,246,0.90)';
-  g.strokeStyle=dark?'rgba(255,255,255,0.18)':'rgba(90,72,48,0.16)'; g.lineWidth=2;
-  rr(g,bx,by,bw,bh,Math.round(W*0.010)); g.fill(); g.stroke();
-  g.fillStyle=dark?'#FFFFFF':'#2B2318'; g.textBaseline='middle'; g.textAlign='center';
-  lines.forEach(function(l,i){ g.fillText(l,bx+bw/2,by+fs*0.5+lh*(i+0.5)); });
+  const lines=wrapLines(g,t,mw-px*2);
+  const bw=Math.min(mw,Math.max.apply(null,lines.map(function(l){ return g.measureText(l).width; }))+px*2),
+        bh=lines.length*lh+py*2, bx=Math.round((W-bw)/2), by=H-Math.round(W*0.03)-bh;
+  glassPanel(g,bx,by,bw,bh,Math.round(Math.min(bh/2,W*0.014)),W);
+  glassInk(g,W); g.fillStyle=dark?'#FFFFFF':'#1E1912'; g.textBaseline='middle'; g.textAlign='center';
+  g.font='500 '+fs+'px Inter, sans-serif';
+  lines.forEach(function(l,i){ g.fillText(l,W/2,by+py+lh*(i+0.5)); });
   g.restore();
 }
 /* ---------- video export: plan, sharper render, replacement card ---------- */
@@ -4623,25 +4692,24 @@ function drawSwapRec(g,W,H){
   const col=(cs.getPropertyValue('--sc')||'').trim()||'#C8452F';
   const cw=Math.round(W*0.30), pad=Math.round(W*0.012), x=Math.round((W-cw)/2), y=Math.round(H*0.115);  /* below the header line */
   const fs=Math.round(W*0.0095), rowH=Math.round(fs*2.1), head=Math.round(fs*1.9), ch=pad*2+head+rowH*3;
-  g.save(); g.globalAlpha=op; g.textBaseline='middle';
-  g.fillStyle=dark?'rgba(8,32,54,0.84)':'rgba(255,252,246,0.92)';
-  g.strokeStyle=dark?'rgba(255,255,255,0.18)':'rgba(90,72,48,0.16)'; g.lineWidth=2;
-  rr(g,x,y,cw,ch,Math.round(W*0.010)); g.fill(); g.stroke();
+  g.save(); g.globalAlpha=op;
+  glassPanel(g,x,y,cw,ch,Math.round(W*0.012),W);
+  glassInk(g,W); g.textBaseline='middle';
   const ty=y+pad+Math.round(head*0.45);
-  g.textAlign='left'; g.fillStyle=dark?'#8FC8EA':'#6B5B44';
+  g.textAlign='left'; g.fillStyle=dark?'#8FC8EA':'#5E5344';
   g.font='600 '+Math.round(fs*1.0)+'px "IBM Plex Mono", monospace';
   g.fillText(scEl.querySelector('.scT span').textContent.toUpperCase(),x+pad,ty);
   g.textAlign='right'; g.fillStyle=col; g.font='700 '+Math.round(fs*1.1)+'px Inter, sans-serif';
   g.fillText(scState.textContent,x+cw-pad,ty);
   scEl.querySelectorAll('.scRow').forEach(function(r,i){
     const ry=y+pad+head+rowH*i+rowH/2;
-    g.textAlign='left'; g.fillStyle=dark?'#D5E2EC':'#4A3F31'; g.font='500 '+fs+'px Inter, sans-serif';
+    g.textAlign='left'; g.fillStyle=dark?'#E6EEF5':'#2B2318'; g.font='500 '+fs+'px Inter, sans-serif';
     g.fillText(r.querySelector('span').textContent,x+pad,ry);
     const bx=x+Math.round(cw*0.60), bw=Math.round(cw*0.20), bh=Math.max(4,Math.round(fs*0.5));
-    g.fillStyle=dark?'rgba(255,255,255,0.14)':'rgba(90,72,48,0.14)'; rr(g,bx,ry-bh/2,bw,bh,bh/2); g.fill();
+    g.fillStyle=dark?'rgba(255,255,255,0.18)':'rgba(60,45,25,0.14)'; rr(g,bx,ry-bh/2,bw,bh,bh/2); g.fill();
     const f=Math.max(0,Math.min(1,(parseFloat(r.querySelector('b').style.width)||0)/100));
     if(f>0){ g.fillStyle=col; rr(g,bx,ry-bh/2,Math.max(bh,bw*f),bh,bh/2); g.fill(); }
-    g.textAlign='right'; g.fillStyle=dark?'#FFFFFF':'#2B2318';
+    g.textAlign='right'; g.fillStyle=dark?'#FFFFFF':'#1E1912';
     g.font='600 '+Math.round(fs*1.1)+'px "IBM Plex Mono", monospace';
     g.fillText(r.querySelector('em').textContent,x+cw-pad,ry);
   });
@@ -4653,8 +4721,11 @@ function recFrame(){
   const sc=Math.max(W/cw,H/ch);
   recCtx.fillStyle=dark?'#08202F':'#EFE6D6'; recCtx.fillRect(0,0,W,H);
   try{ recCtx.drawImage(cv,(W-cw*sc)/2,(H-ch*sc)/2,cw*sc,ch*sc); }catch(e){}
+  glassPrep(W,H);
+  const card=document.getElementById('xCap').value==='1';
+  if(card) drawBrandRec(recCtx,W,H);
   if(SAV.open) drawSavingsRec(recCtx,W,H);
-  else if(!SWAP&&document.getElementById('xCap').value==='1') drawCaption(recCtx,W,H);
+  else if(!SWAP&&card&&!(parseFloat(getComputedStyle(scEl).opacity)>0.02)) drawCaption(recCtx,W,H);  /* wait until the replacement card has faded */
   drawSwapRec(recCtx,W,H);
   if(VOP.cap&&capText) drawSubtitle(recCtx,W,H,capText);
   recRAF=requestAnimationFrame(recFrame);
@@ -4705,10 +4776,13 @@ xRec.onclick=function(){
   const steps=tourSteps(recScope,true);
   cur=-1;
   recOn=true; xRec.textContent='Stop recording';
-  recorder.start();
-  recFrame();
-  xMsg.textContent='Recording about '+fmtT(tourEstimate(steps,sec*1000))+' at '+W+'×'+H+(voiceTrack?', with narration':'')+'.';
-  runTour(steps,{fallback:sec*1000,onDone:function(){ stopRec('Rendering the file…'); }});
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){
+    if(!recOn) return;
+    recorder.start();
+    recFrame();
+    xMsg.textContent='Recording about '+fmtT(tourEstimate(steps,sec*1000))+' at '+W+'×'+H+(voiceTrack?', with narration':'')+'.';
+    runTour(steps,{fallback:sec*1000,onDone:function(){ stopRec('Rendering the file…'); }});
+  }); });
 };
 
 /* ============ LOOP ============ */
@@ -4971,5 +5045,5 @@ if(ld){ ld.style.opacity=0; setTimeout(function(){ if(ld.parentNode) ld.remove()
 tick();
 </script>
 <script id="voData" type="application/json">{"v":1,"clips":{"talo-00":{"name":"overview talo 00.mp3","mime":"audio/mpeg","src":"audio/talo-00.mp3","dur":32.026063},"talo-01":{"name":"melter talo.mp3","mime":"audio/mpeg","src":"audio/talo-01.mp3","dur":5.328938},"talo-02":{"name":"talo 02.mp3","mime":"audio/mpeg","src":"audio/talo-02.mp3","dur":14.367313},"talo-03":{"name":"talo 03.mp3","mime":"audio/mpeg","src":"audio/talo-03.mp3","dur":21.786063},"talo-04":{"name":"talo 04.mp3","mime":"audio/mpeg","src":"audio/talo-04.mp3","dur":14.02775},"talo-05":{"name":"talo 05.mp3","mime":"audio/mpeg","src":"audio/talo-05.mp3","dur":26.671},"talo-06":{"name":"talo 06.mp3","mime":"audio/mpeg","src":"audio/talo-06.mp3","dur":11.807313},"talo-07":{"name":"talo 07.mp3","mime":"audio/mpeg","src":"audio/talo-07.mp3","dur":19.879125},"talo-08":{"name":"talo 08.mp3","mime":"audio/mpeg","src":"audio/talo-08.mp3","dur":12.355875},"talo-09":{"name":"talo 09 pref.mp3","mime":"audio/mpeg","src":"audio/talo-09.mp3","dur":22.125688},"hpa-00":{"name":"hpa 00.mp3","mime":"audio/mpeg","src":"audio/hpa-00.mp3","dur":31.085688},"hpa-01":{"name":"hpa 01.mp3","mime":"audio/mpeg","src":"audio/hpa-01.mp3","dur":10.684063},"hpa-02":{"name":"hpa 02.mp3","mime":"audio/mpeg","src":"audio/hpa-02.mp3","dur":15.30775},"hpa-03":{"name":"hpa 03.mp3","mime":"audio/mpeg","src":"audio/hpa-03.mp3","dur":29.570563},"hpa-04":{"name":"hpa 04.mp3","mime":"audio/mpeg","src":"audio/hpa-04.mp3","dur":20.506063},"hpa-05":{"name":"hpa 05.mp3","mime":"audio/mpeg","src":"audio/hpa-05.mp3","dur":19.487313},"hpa-06":{"name":"hpa 06.mp3","mime":"audio/mpeg","src":"audio/hpa-06.mp3","dur":19.879125},"hpa-07":{"name":"hpa 07.mp3","mime":"audio/mpeg","src":"audio/hpa-07.mp3","dur":9.952625},"hpa-08":{"name":"hpa 08.mp3","mime":"audio/mpeg","src":"audio/hpa-08.mp3","dur":21.551},"hpa-09":{"name":"hpa 09.mp3","mime":"audio/mpeg","src":"audio/hpa-09.mp3","dur":39.888938},"swap-to-hpa":{"name":"talo to hpa.mp3","mime":"audio/mpeg","src":"audio/swap-to-hpa.mp3","dur":9.325688},"swap-to-talo":{"name":"hpa to talo.mp3","mime":"audio/mpeg","src":"audio/swap-to-talo.mp3","dur":9.168938},"sum-1":{"name":"sum 01.mp3","mime":"audio/mpeg","src":"audio/sum-1.mp3","dur":34.429375},"sum-2":{"name":"sum 02.mp3","mime":"audio/mpeg","src":"audio/sum-2.mp3","dur":12.199125},"sum-3":{"name":"sum 03.mp3","mime":"audio/mpeg","src":"audio/sum-3.mp3","dur":33.071},"sum-4":{"name":"sum 04.mp3","mime":"audio/mpeg","src":"audio/sum-4.mp3","dur":32.7575}},"text":{"talo-00":"This is Ramzan Sugar Mill's refinery as it runs today. It crushes 17,000 tonnes of cane and refines 1,650 tonnes of sugar a day. The melt is cleaned in a Talo clarifier, usually with chemicals such as: phosphoric acid, lime, decolorizer, and flocculant. They cost about 324,000 dollars a season… and running the clarifier about 210,000 more. Even so, fine liquor still comes out at 350 ICUMSA.","talo-01":"Raw sugar is melted here, into raw melt at 650 ICUMSA.","hpa-01":"The melter stays the same, with raw melt at 650 ICUMSA. [confident] But with HPA, no other chemicals are needed here, saving about 36,000 dollars a season.","hpa-02":"This tank gives the reaction tank a steady feed, because HPA is dosed on the liquor. [confident] At 500 PPM and 1,650 tonnes a day, that is only 825 kilograms of HPA a day.","hpa-05":"[confident] These membrane presses remove the used HPA, and the colour with it. The filter cloths are precoated with 250 PPM, FA-10 filter aid. At 500 PPM, HPA and FA-10 cost about 28.5% less than the old method.","sum-2":"[excited] Now, let's switch Ramzan to HPA. The Talo clarifier and its five chemicals leave the process. One adsorbent, HPA, and one filter aid, FA-10, take their place."}}</script>
-<script id="edData" type="application/json">{"v":1,"txt":{"hTitle":"HPA Proposal — Ramzan Sugar Mill Refinery","hSub":"17,000 TCD · 1,650 TPD refined · 120-day season · CSI study, 8 Oct 2026","mOld":"Talo Refinery","mNew":"Talo-less HPA Refinery","gapHead":"Talo Process Inefficiencies","hint":"CLICK EQUIPMENT TO OPEN ITS STAGE · DRAG ORBIT · SCROLL ZOOM · SHIFT-DRAG PAN · ←→ STAGES · H HOME · ESC STOP"},"stages":{"new":[{"no":"00","name":"Overview","title":"Ramzan refinery without the Talo clarifier","sub":"HPA + FA-10 replace clarification · 1,650 TPD refined","body":"Strategies 1 and 3 of the CSI study bypass the Talo clarifier. The traditional clarification chemicals such as phosphoric acid, lime, decolorizer, and flocculant; are replaced by \u003cem>HPA adsorption followed by membrane-press filtration\u003c/em> with FA-10 filter aid. At 500 ppm HPA (Strategy 1) the fine liquor stays at today’s ≈350 IU at lower cost. At 800 ppm (Strategy 3) the target is below 190 IU and premium R1–R3 sugar.","mets":[["$300,417","Strategy 1 saving / season"],["$2.28–3.27M","Strategy 3 net / season"],["$280–320k","Preliminary CAPEX"],["1.0–1.7 months","Strategy 3 payback"]],"note":"CSI Technical & Economic Study for Ramzan Sugar Mill, 8 October 2026. Clarifier elimination and the \u003c190 IU target are subject to plant validation."},{"no":"01","name":"Raw sugar melter","title":"Raw sugar melter","sub":"Raw melt · 650 IU · 66.24 °Bx","body":"Raw sugar from the centrifugals is melted to raw melt liquor at 650 IU, 66.24 °Bx and pH 6.2. On the HPA route nothing is dosed here: The melt goes to HPA treatment instead of Phosphatation.","mets":[["650 IU","Raw melt colour"],["66.24 °Bx","Raw melt Brix"],["6.2","Raw melt pH"],["340","Raw melt turbidity"]],"note":"Chemical costs are drastically reduced in Strategies 1 and 3."},{"no":"02","name":"Melt liquor tank","title":"Melt liquor tank","sub":"Steady feed to the HPA reaction tank","body":"The melt station itself is unchanged by the proposal. This tank evens out the melter and feeds the reaction tank at a steady rate — important because HPA is dosed in ppm on the liquor: \u003cem>500 ppm at 1,650 TPD is 825 kg of HPA a day\u003c/em>.","mets":[["1,650 TPD","Refined sugar"],["17,000 TCD","Cane throughput"],["120 days","Season basis"],["198,000 MT","Refined sugar / season"]],"note":""},{"no":"03","name":"HPA reaction tank","title":"HPA reaction tank","sub":"The step that replaces the Talo clarifier","body":"HPA is dosed into the melt liquor in an agitated reaction tank and captures colour by adsorption. At \u003cem>500 ppm\u003c/em> (Strategy 1) the target is today’s fine-liquor colour of ≈350 IU. At \u003cem>800 ppm\u003c/em> (Strategy 3) the reference removal of about 70% predicts ≈195 IU from 650 IU raw melt; going below 190 IU needs 70.8% removal, so dose, contact time and filtration are optimised during the plant trial. The liquor turns dark because spent HPA stays in suspension until the presses.","mets":[["500 ppm","Strategy 1 · 825 kg/day"],["800 ppm","Strategy 3 · 1,320 kg/day"],["$198,000","HPA / season at 500 ppm"],["$316,800","HPA / season at 800 ppm"]],"note":"HPA at $2.00/kg — a reference price until Ramzan confirms actual prices."},{"no":"04","name":"Pre-filtration buffer","title":"Pre-filtration buffer tank","sub":"Contact time, then steady feed to the presses","body":"The dosed liquor holds here to complete adsorption, then feeds the membrane presses at steady pressure. There is \u003cem>no flotation, no scum and no clarifier sludge\u003c/em> — the spent HPA leaves as filter cake. The trial checks that filtration cycle, pressure and flow stay stable at or above today’s production rate.","mets":[["Stable","Filtration · cycle, pressure, flow"],["≥ current","Production rate (trial KPI)"],["$19,800","Waste handling saved / season"],["$13,860","Cleaning saved / season"]],"note":""},{"no":"05","name":"Membrane press filters","title":"Membrane press filters","sub":"Spent HPA and colour leave as filter cake","body":"The presses separate the spent HPA from the liquor, with \u003cem>FA-10 filter aid precoated at 250 ppm\u003c/em> — 412.5 kg a day, 49.5 MT a season. This is where the colour physically leaves the process. HPA plus FA-10 costs $1.18 per tonne of sugar at 500 ppm and $1.78 at 800 ppm, against $1.654 for today’s clarification chemicals.","mets":[["250 ppm","FA-10 precoat"],["$35,640","FA-10 / season at $0.72/kg"],["$233,640","HPA + FA-10 · 500 ppm"],["$352,440","HPA + FA-10 · 800 ppm"]],"note":""},{"no":"06","name":"Filtrate storage","title":"Filtrate storage tank","sub":"Fine liquor ≈350 IU, or a target below 190 IU","body":"Strategy 1 delivers about the same fine liquor as today, ≈350 IU, without the clarifier. Strategy 3 targets \u003cem>below 190 IU\u003c/em>. Lower colour also lowers the modeled water, steam and sucrose-loss cost of the fine liquor — by \u003cem>$116,225 a season\u003c/em> between 350 and 190 IU.","mets":[["≈350 IU","Strategy 1 fine liquor"],["\u003c190 IU","Strategy 3 target*"],["$116,225","Fine-liquor benefit / season"],["5,886 MT","Less sucrose dissolved (model)"]],"note":"*Subject to plant validation. The fine-liquor benefit is a theoretical model result, not a guaranteed cash saving."},{"no":"07","name":"Bag filters","title":"Bag filters","sub":"Security filtration before the pans","body":"Bag filters catch any filter aid or fines that get past a press cloth, so only clean, bright liquor reaches the pans.","mets":[["Polishing","Duty"],["Stable","Filtration KPI"],["Continuous","Operation"],["To pans","Clean fine liquor"]],"note":""},{"no":"08","name":"Fine liquor heater","title":"Fine liquor heater","sub":"Lower colour, lighter load downstream","body":"The fine liquor is heated for the pans. At lower colour, the study’s fine-liquor model shows less water, steam and sucrose loss downstream: \u003cem>1,664 m³ less water, $26,117 less steam and $88,278 less sucrose-loss cost\u003c/em> each season as fine liquor moves from 350 to 190 IU.","mets":[["1,664 m³","Water saved (model)"],["$26,117","Steam cost saved"],["$1,830","Water cost saved"],["$88,278","Sucrose-loss cost saved"]],"note":"Model: 350 IU to the 190 IU threshold, scaled from the reference proposal."},{"no":"09","name":"To vacuum pans","title":"To the vacuum pans","sub":"Premium sugar and the season’s economics","body":"Strategy 3 targets premium sugar: \u003cem>R1 15–20, R2 25–30 and R3 35–40 IU\u003c/em>, against 25–35, 45–50 and 65–70 IU today. A $10–15/MT premium on 198,000 MT is $1.98–2.97M a season. Net of HPA and FA-10, with clarifier chemicals and running costs removed, Strategy 3 is worth \u003cem>$2.28–3.27M a season\u003c/em> and pays back $280–320k of CAPEX in about 1 to 1.7 months.","mets":[["15–20 IU","R1 target (now 25–35)"],["25–30 IU","R2 target (now 45–50)"],["35–40 IU","R3 target (now 65–70)"],["$2.28–3.27M","Strategy 3 net / season"]],"note":"Premium margins are market opportunities, not guaranteed revenue. Final sugar colours are trial targets. Open Savings for all three strategies."}],"old":[{"no":"00","name":"Overview","title":"Ramzan refinery today: Talo clarification","sub":"Phosphatation · five clarification chemicals · 1,650 TPD","body":"Raw melt at 650 IU is clarified by \u003cem>phosphatation and flotation\u003c/em> in a Talo clarifier, traditionally using chemicals such as phosphoric acid, lime saccharate, decolorizer, and flocculants. Yet, the clarifier brings colour only to 375 IU, and the deep bed filters finish at 350 IU fine liquor. Sugar comes off at R1 25–35, R2 45–50 and R3 65–70 IU.","mets":[["$324,177","Chemical spend / season"],["$1.654/MT","Chemical cost per tonne"],["$209,880","Clarifier running cost / season"],["350 IU","Fine liquor colour"]],"gap":"Every season Ramzan spends $324,177 on clarification chemicals and $209,880 on running the clarifier — steam, water, power, maintenance, labour, sludge handling, cleaning and spare parts. Strategy 1 removes both and holds the same ≈350 IU for $233,640 of HPA and FA-10.","note":""},{"no":"01","name":"Melter & buffer","title":"Raw sugar melter and buffer tank","sub":"Raw melt 650 IU · FRS-W2 dosed at the melter","body":"Raw sugar is melted to 650 IU raw melt at 66.24 °Bx, pH 6.2 and turbidity 340.","mets":[["650 IU","Raw melt colour"],["66.24 °Bx","Raw melt Brix"],["70 ppm","FRS-W2 dosage"],["$36,036","FRS-W2 / season at $2.60/kg"]],"gap":"","note":""},{"no":"02","name":"Plate heat exchanger","title":"Plate heat exchanger","sub":"Heating the liquor for phosphatation","body":"Melt liquor is heated before chemical treatment, because phosphatation needs hot liquor to form calcium phosphate floc. The exchanger uses steam and its plates need regular cleaning.","mets":[["Steam","Utility used"],["Regular","Plate cleaning"],["$45,540","Clarification steam / season"],["$49,500","Clarification maintenance / season"]],"gap":"In the study, clarification-related steam costs $45,540 a season and maintenance $49,500 ($0.23 and $0.25 per tonne of sugar). Strategies 1 and 3 bypass the clarifier and these costs with it.","note":""},{"no":"03","name":"Chemical dosing","title":"Phosphoric acid, lime and decolorizer","sub":"Three chemical streams into the mixing tank","body":"Phosphoric acid (250 ppm) and lime saccharate (450 ppm) react to form \u003cem>calcium phosphate floc\u003c/em>, and decolorizer (385 ppm) is dosed for colour. Each chemical needs its own storage, preparation, dosing pump and daily handling.","mets":[["250 ppm","Phosphoric acid · $99,000"],["450 ppm","Lime · $26,730"],["385 ppm","Decolorizer · $190,575"],["$1.654/MT","All clarification chemicals"]],"gap":"The decolorizer alone costs $190,575 a season — more than half of the clarification chemical bill. Strategies 1 and 3 replace all five chemicals with HPA and FA-10.","note":"Chemical prices are reference-proposal assumptions until Ramzan provides actual purchase prices."},{"no":"04","name":"Aeration & flocculant","title":"Aeration tank and flocculant","sub":"Air and flocculant to float the floc","body":"Flocculant (10 ppm) is dosed and compressed air is bubbled in, so the floc grows, catches the bubbles and floats in the Talo clarifier.","mets":[["10 ppm","Flocculant dosage"],["$4,811","Flocculant / season"],["$2.43/kg","Flocculant price"],["$19,800","Clarification power / season"]],"gap":"The air compressor and the flocculant preparation exist only to make solids float. Adsorption needs neither. Clarification-related electrical power alone is $19,800 a season in the study.","note":""},{"no":"05","name":"Talo clarifier","title":"Talo clarifier","sub":"Flotation, scum and sludge — colour only to 375 IU","body":"Floc floats and is skimmed off as scum, and solid sludge leaves the system. Colour falls from 650 to only \u003cem>375 IU\u003c/em>, and turbidity barely moves, from 340 to 325. Running the clarifier costs $1.06 per tonne of sugar — $209,880 a season in steam, water, power, maintenance, labour, waste handling, cleaning and spare parts.","mets":[["375 IU","Clear liquor colour"],["325","Clear liquor turbidity"],["$209,880","Running cost / season"],["$1.06/MT","Running cost per tonne"]],"gap":"Sludge must be handled and disposed of and the clarifier cleaned. The study also counts higher throughput and better sugar recovery as further upside of removing it. Strategies 1 and 3 bypass the clarifier after plant validation.","note":""},{"no":"06","name":"Deep bed filters","title":"Deep bed filters","sub":"Clear liquor 375 IU → fine liquor 350 IU","body":"Deep bed filters polish the clear liquor. Colour drops only from 375 to 350 IU, and turbidity from 325 to 300 — the fine liquor still carries more than half of the raw-melt colour into the pan house.","mets":[["350 IU","Fine liquor colour"],["300","Fine liquor turbidity"],["70.00 °Bx","Fine liquor Brix"],["6.5","Fine liquor pH"]],"gap":"From 650 IU raw melt, the whole clarification section delivers 350 IU fine liquor: 46% colour removal for five chemicals and a clarifier.","note":""},{"no":"07","name":"Fine liquor storage","title":"Fine liquor storage","sub":"350 IU — no premium grade","body":"Fine liquor is stored before the pans at 350 IU. The study’s model puts the cost of this colour level at \u003cem>$264,207 a season\u003c/em> in steam, water and sucrose loss, against $147,982 at 190 IU.","mets":[["$264,207","Modeled cost at 350 IU"],["$147,982","Modeled cost at 190 IU"],["3,782 m³","Water at 350 IU (model)"],["13,379 MT","Sucrose dissolved (model)"]],"gap":"The difference is $116,225 a season — the fine-liquor benefit Strategies 2 and 3 capture by going below 190 IU.","note":""},{"no":"08","name":"Fine liquor heater","title":"Fine liquor heater","sub":"Higher colour, heavier load downstream","body":"The heater conditions fine liquor for the pans. At 350 IU the study’s model puts the steam cost at $59,371 a season and the sucrose-loss cost at $200,676.","mets":[["$59,371","Steam cost (model)"],["$4,160","Water cost (model)"],["$200,676","Sucrose-loss cost (model)"],["350 IU","Fine liquor in"]],"gap":"At 190 IU the same model gives $33,253 of steam and $112,398 of sucrose-loss cost.","note":""},{"no":"09","name":"To vacuum pans","title":"To the vacuum pans","sub":"R1 25–35 · R2 45–50 · R3 65–70 IU","body":"Today’s sugar comes off at \u003cem>R1 25–35, R2 45–50 and R3 65–70 IU\u003c/em>, with no premium grade. And every season the mill pays $324,177 for clarification chemicals and $209,880 to run the clarifier.","mets":[["25–35 IU","R1 today"],["45–50 IU","R2 today"],["65–70 IU","R3 today"],["No","Premium sugar"]],"gap":"With HPA, Strategies 2 and 3 target R1 15–20, R2 25–30 and R3 35–40 IU — worth $1.98–2.97M a season at a $10–15/MT premium.","note":"Open Savings for the full comparison of all three strategies."}]},"plant":{"new":{"labels":[[1,"01 · Raw sugar melter"],[2,"02 · Melt liquor tank"],[3,"03 · HPA reaction tank"],[4,"04 · Pre-filtration buffer"],[5,"05 · Membrane press filters"],[6,"06 · Filtrate storage"],[7,"07 · Bag filters"],[8,"08 · Fine liquor heater"],[9,"09 · Vacuum pan"]],"chem":["HPA · 500–800 ppm · dry powder","Spent HPA · dry cake"]},"old":{"labels":[[1,"01 · Melter and buffer"],[2,"02 · Plate heat exchanger"],[3,"03 · Acid · lime · decolorant"],[4,"04 · Aeration and flocculant"],[5,"05 · Talo clarifier"],[6,"06 · Deep bed filters"],[7,"07 · Fine liquor storage"],[8,"08 · Fine liquor heater"],[9,"09 · Vacuum pan"]],"chem":["PHOSPHORIC ACID","LIME SACCHARATE","LIQUID DECOLORANT","FLOCCULANT","FRS-W2 · 70 ppm"]}},"liq":{"raw":"#A0713C","melt":"#B07E42","hpa":"#2E2A26","dosed":"#5A4229","black":"#4A3522","filt":"#DFA948","clear":"#E9BB5C","polish":"#EDCD80","fine":"#EFDA9C","o_melt":"#A9763E","o_hot":"#B5854A","o_limed":"#8E7B4E","o_floc":"#9A8A62","o_clar":"#D6A048","o_dbf":"#E0B25A","o_fine":"#E9C87E","o_mud":"#544631","o_scum":"#8C7A59","c_acid":"#BFDCEC","c_lime":"#EFEADB","c_decol":"#4E3520","c_flocc":"#CBDDE4","c_air":"#BFE2F5","c_frs":"#D8CDA8"},"render":{"fin":"brushed","ao":"0","bloom":"1","exp":"83","refl":"48","tone":"57","steel":"#f2f2f2","grad":0.94,"swap":"1","hdri":""},"rec":{"res":"1920","sec":"6","cap":"1","scope":"story","sub":"1"},"vop":{"click":true,"cap":true,"scope":"story","vol":1,"gap":0.8}}</script>
+<script id="edData" type="application/json">{"v":1,"txt":{"hTitle":"HPA Refinery Proposal","hSub":"17,000 TCD · 1,650 TPD refined · 120-day season · CSI study, 8 Oct 2026","mOld":"Talo Refinery","mNew":"Talo-less HPA Refinery","gapHead":"Talo Process Inefficiencies","hint":"CLICK EQUIPMENT TO OPEN ITS STAGE · DRAG ORBIT · SCROLL ZOOM · SHIFT-DRAG PAN · ←→ STAGES · H HOME · ESC STOP"},"stages":{"new":[{"no":"00","name":"Overview","title":"The refinery without the Talo clarifier","sub":"HPA + FA-10 replace clarification · 1,650 TPD refined","body":"Strategies 1 and 3 of the CSI study bypass the Talo clarifier. The traditional clarification chemicals such as phosphoric acid, lime, decolorizer, and flocculant; are replaced by \u003cem>HPA adsorption followed by membrane-press filtration\u003c/em> with FA-10 filter aid. At 500 ppm HPA (Strategy 1) the fine liquor stays at today’s ≈350 IU at lower cost. At 800 ppm (Strategy 3) the target is below 190 IU and premium R1–R3 sugar.","mets":[["$300,417","Strategy 1 saving / season"],["$2.28–3.27M","Strategy 3 net / season"],["$280–320k","Preliminary CAPEX"],["1.0–1.7 months","Strategy 3 payback"]],"note":"CSI Technical & Economic Study for Ramzan Sugar Mill, 8 October 2026. Clarifier elimination and the \u003c190 IU target are subject to plant validation."},{"no":"01","name":"Raw sugar melter","title":"Raw sugar melter","sub":"Raw melt · 650 IU · 66.24 °Bx","body":"Raw sugar from the centrifugals is melted to raw melt liquor at 650 IU, 66.24 °Bx and pH 6.2. On the HPA route nothing is dosed here: The melt goes to HPA treatment instead of Phosphatation.","mets":[["650 IU","Raw melt colour"],["66.24 °Bx","Raw melt Brix"],["6.2","Raw melt pH"],["340","Raw melt turbidity"]],"note":"Chemical costs are drastically reduced in Strategies 1 and 3."},{"no":"02","name":"Melt liquor tank","title":"Melt liquor tank","sub":"Steady feed to the HPA reaction tank","body":"The melt station itself is unchanged by the proposal. This tank evens out the melter and feeds the reaction tank at a steady rate — important because HPA is dosed in ppm on the liquor: \u003cem>500 ppm at 1,650 TPD is 825 kg of HPA a day\u003c/em>.","mets":[["1,650 TPD","Refined sugar"],["17,000 TCD","Cane throughput"],["120 days","Season basis"],["198,000 MT","Refined sugar / season"]],"note":""},{"no":"03","name":"HPA reaction tank","title":"HPA reaction tank","sub":"The step that replaces the Talo clarifier","body":"HPA is dosed into the melt liquor in an agitated reaction tank and captures colour by adsorption. At \u003cem>500 ppm\u003c/em> (Strategy 1) the target is today’s fine-liquor colour of ≈350 IU. At \u003cem>800 ppm\u003c/em> (Strategy 3) the reference removal of about 70% predicts ≈195 IU from 650 IU raw melt; going below 190 IU needs 70.8% removal, so dose, contact time and filtration are optimised during the plant trial. The liquor turns dark because spent HPA stays in suspension until the presses.","mets":[["500 ppm","Strategy 1 · 825 kg/day"],["800 ppm","Strategy 3 · 1,320 kg/day"],["$198,000","HPA / season at 500 ppm"],["$316,800","HPA / season at 800 ppm"]],"note":"HPA at $2.00/kg — a reference price until Ramzan confirms actual prices."},{"no":"04","name":"Pre-filtration buffer","title":"Pre-filtration buffer tank","sub":"Contact time, then steady feed to the presses","body":"The dosed liquor holds here to complete adsorption, then feeds the membrane presses at steady pressure. There is \u003cem>no flotation, no scum and no clarifier sludge\u003c/em> — the spent HPA leaves as filter cake. The trial checks that filtration cycle, pressure and flow stay stable at or above today’s production rate.","mets":[["Stable","Filtration · cycle, pressure, flow"],["≥ current","Production rate (trial KPI)"],["$19,800","Waste handling saved / season"],["$13,860","Cleaning saved / season"]],"note":""},{"no":"05","name":"Membrane press filters","title":"Membrane press filters","sub":"Spent HPA and colour leave as filter cake","body":"The presses separate the spent HPA from the liquor, with \u003cem>FA-10 filter aid precoated at 250 ppm\u003c/em> — 412.5 kg a day, 49.5 MT a season. This is where the colour physically leaves the process. HPA plus FA-10 costs $1.18 per tonne of sugar at 500 ppm and $1.78 at 800 ppm, against $1.654 for today’s clarification chemicals.","mets":[["250 ppm","FA-10 precoat"],["$35,640","FA-10 / season at $0.72/kg"],["$233,640","HPA + FA-10 · 500 ppm"],["$352,440","HPA + FA-10 · 800 ppm"]],"note":""},{"no":"06","name":"Filtrate storage","title":"Filtrate storage tank","sub":"Fine liquor ≈350 IU, or a target below 190 IU","body":"Strategy 1 delivers about the same fine liquor as today, ≈350 IU, without the clarifier. Strategy 3 targets \u003cem>below 190 IU\u003c/em>. Lower colour also lowers the modeled water, steam and sucrose-loss cost of the fine liquor — by \u003cem>$116,225 a season\u003c/em> between 350 and 190 IU.","mets":[["≈350 IU","Strategy 1 fine liquor"],["\u003c190 IU","Strategy 3 target*"],["$116,225","Fine-liquor benefit / season"],["5,886 MT","Less sucrose dissolved (model)"]],"note":"*Subject to plant validation. The fine-liquor benefit is a theoretical model result, not a guaranteed cash saving."},{"no":"07","name":"Bag filters","title":"Bag filters","sub":"Security filtration before the pans","body":"Bag filters catch any filter aid or fines that get past a press cloth, so only clean, bright liquor reaches the pans.","mets":[["Polishing","Duty"],["Stable","Filtration KPI"],["Continuous","Operation"],["To pans","Clean fine liquor"]],"note":""},{"no":"08","name":"Fine liquor heater","title":"Fine liquor heater","sub":"Lower colour, lighter load downstream","body":"The fine liquor is heated for the pans. At lower colour, the study’s fine-liquor model shows less water, steam and sucrose loss downstream: \u003cem>1,664 m³ less water, $26,117 less steam and $88,278 less sucrose-loss cost\u003c/em> each season as fine liquor moves from 350 to 190 IU.","mets":[["1,664 m³","Water saved (model)"],["$26,117","Steam cost saved"],["$1,830","Water cost saved"],["$88,278","Sucrose-loss cost saved"]],"note":"Model: 350 IU to the 190 IU threshold, scaled from the reference proposal."},{"no":"09","name":"To vacuum pans","title":"To the vacuum pans","sub":"Premium sugar and the season’s economics","body":"Strategy 3 targets premium sugar: \u003cem>R1 15–20, R2 25–30 and R3 35–40 IU\u003c/em>, against 25–35, 45–50 and 65–70 IU today. A $10–15/MT premium on 198,000 MT is $1.98–2.97M a season. Net of HPA and FA-10, with clarifier chemicals and running costs removed, Strategy 3 is worth \u003cem>$2.28–3.27M a season\u003c/em> and pays back $280–320k of CAPEX in about 1 to 1.7 months.","mets":[["15–20 IU","R1 target (now 25–35)"],["25–30 IU","R2 target (now 45–50)"],["35–40 IU","R3 target (now 65–70)"],["$2.28–3.27M","Strategy 3 net / season"]],"note":"Premium margins are market opportunities, not guaranteed revenue. Final sugar colours are trial targets. Open Savings for all three strategies."}],"old":[{"no":"00","name":"Overview","title":"The refinery today: Talo clarification","sub":"Phosphatation · five clarification chemicals · 1,650 TPD","body":"Raw melt at 650 IU is clarified by \u003cem>phosphatation and flotation\u003c/em> in a Talo clarifier, traditionally using chemicals such as phosphoric acid, lime saccharate, decolorizer, and flocculants. Yet, the clarifier brings colour only to 375 IU, and the deep bed filters finish at 350 IU fine liquor. Sugar comes off at R1 25–35, R2 45–50 and R3 65–70 IU.","mets":[["$324,177","Chemical spend / season"],["$1.654/MT","Chemical cost per tonne"],["$209,880","Clarifier running cost / season"],["350 IU","Fine liquor colour"]],"gap":"Every season Ramzan spends $324,177 on clarification chemicals and $209,880 on running the clarifier — steam, water, power, maintenance, labour, sludge handling, cleaning and spare parts. Strategy 1 removes both and holds the same ≈350 IU for $233,640 of HPA and FA-10.","note":""},{"no":"01","name":"Melter & buffer","title":"Raw sugar melter and buffer tank","sub":"Raw melt 650 IU · FRS-W2 dosed at the melter","body":"Raw sugar is melted to 650 IU raw melt at 66.24 °Bx, pH 6.2 and turbidity 340.","mets":[["650 IU","Raw melt colour"],["66.24 °Bx","Raw melt Brix"],["70 ppm","FRS-W2 dosage"],["$36,036","FRS-W2 / season at $2.60/kg"]],"gap":"","note":""},{"no":"02","name":"Plate heat exchanger","title":"Plate heat exchanger","sub":"Heating the liquor for phosphatation","body":"Melt liquor is heated before chemical treatment, because phosphatation needs hot liquor to form calcium phosphate floc. The exchanger uses steam and its plates need regular cleaning.","mets":[["Steam","Utility used"],["Regular","Plate cleaning"],["$45,540","Clarification steam / season"],["$49,500","Clarification maintenance / season"]],"gap":"In the study, clarification-related steam costs $45,540 a season and maintenance $49,500 ($0.23 and $0.25 per tonne of sugar). Strategies 1 and 3 bypass the clarifier and these costs with it.","note":""},{"no":"03","name":"Chemical dosing","title":"Phosphoric acid, lime and decolorizer","sub":"Three chemical streams into the mixing tank","body":"Phosphoric acid (250 ppm) and lime saccharate (450 ppm) react to form \u003cem>calcium phosphate floc\u003c/em>, and decolorizer (385 ppm) is dosed for colour. Each chemical needs its own storage, preparation, dosing pump and daily handling.","mets":[["250 ppm","Phosphoric acid · $99,000"],["450 ppm","Lime · $26,730"],["385 ppm","Decolorizer · $190,575"],["$1.654/MT","All clarification chemicals"]],"gap":"The decolorizer alone costs $190,575 a season — more than half of the clarification chemical bill. Strategies 1 and 3 replace all five chemicals with HPA and FA-10.","note":"Chemical prices are reference-proposal assumptions until Ramzan provides actual purchase prices."},{"no":"04","name":"Aeration & flocculant","title":"Aeration tank and flocculant","sub":"Air and flocculant to float the floc","body":"Flocculant (10 ppm) is dosed and compressed air is bubbled in, so the floc grows, catches the bubbles and floats in the Talo clarifier.","mets":[["10 ppm","Flocculant dosage"],["$4,811","Flocculant / season"],["$2.43/kg","Flocculant price"],["$19,800","Clarification power / season"]],"gap":"The air compressor and the flocculant preparation exist only to make solids float. Adsorption needs neither. Clarification-related electrical power alone is $19,800 a season in the study.","note":""},{"no":"05","name":"Talo clarifier","title":"Talo clarifier","sub":"Flotation, scum and sludge — colour only to 375 IU","body":"Floc floats and is skimmed off as scum, and solid sludge leaves the system. Colour falls from 650 to only \u003cem>375 IU\u003c/em>, and turbidity barely moves, from 340 to 325. Running the clarifier costs $1.06 per tonne of sugar — $209,880 a season in steam, water, power, maintenance, labour, waste handling, cleaning and spare parts.","mets":[["375 IU","Clear liquor colour"],["325","Clear liquor turbidity"],["$209,880","Running cost / season"],["$1.06/MT","Running cost per tonne"]],"gap":"Sludge must be handled and disposed of and the clarifier cleaned. The study also counts higher throughput and better sugar recovery as further upside of removing it. Strategies 1 and 3 bypass the clarifier after plant validation.","note":""},{"no":"06","name":"Deep bed filters","title":"Deep bed filters","sub":"Clear liquor 375 IU → fine liquor 350 IU","body":"Deep bed filters polish the clear liquor. Colour drops only from 375 to 350 IU, and turbidity from 325 to 300 — the fine liquor still carries more than half of the raw-melt colour into the pan house.","mets":[["350 IU","Fine liquor colour"],["300","Fine liquor turbidity"],["70.00 °Bx","Fine liquor Brix"],["6.5","Fine liquor pH"]],"gap":"From 650 IU raw melt, the whole clarification section delivers 350 IU fine liquor: 46% colour removal for five chemicals and a clarifier.","note":""},{"no":"07","name":"Fine liquor storage","title":"Fine liquor storage","sub":"350 IU — no premium grade","body":"Fine liquor is stored before the pans at 350 IU. The study’s model puts the cost of this colour level at \u003cem>$264,207 a season\u003c/em> in steam, water and sucrose loss, against $147,982 at 190 IU.","mets":[["$264,207","Modeled cost at 350 IU"],["$147,982","Modeled cost at 190 IU"],["3,782 m³","Water at 350 IU (model)"],["13,379 MT","Sucrose dissolved (model)"]],"gap":"The difference is $116,225 a season — the fine-liquor benefit Strategies 2 and 3 capture by going below 190 IU.","note":""},{"no":"08","name":"Fine liquor heater","title":"Fine liquor heater","sub":"Higher colour, heavier load downstream","body":"The heater conditions fine liquor for the pans. At 350 IU the study’s model puts the steam cost at $59,371 a season and the sucrose-loss cost at $200,676.","mets":[["$59,371","Steam cost (model)"],["$4,160","Water cost (model)"],["$200,676","Sucrose-loss cost (model)"],["350 IU","Fine liquor in"]],"gap":"At 190 IU the same model gives $33,253 of steam and $112,398 of sucrose-loss cost.","note":""},{"no":"09","name":"To vacuum pans","title":"To the vacuum pans","sub":"R1 25–35 · R2 45–50 · R3 65–70 IU","body":"Today’s sugar comes off at \u003cem>R1 25–35, R2 45–50 and R3 65–70 IU\u003c/em>, with no premium grade. And every season the mill pays $324,177 for clarification chemicals and $209,880 to run the clarifier.","mets":[["25–35 IU","R1 today"],["45–50 IU","R2 today"],["65–70 IU","R3 today"],["No","Premium sugar"]],"gap":"With HPA, Strategies 2 and 3 target R1 15–20, R2 25–30 and R3 35–40 IU — worth $1.98–2.97M a season at a $10–15/MT premium.","note":"Open Savings for the full comparison of all three strategies."}]},"plant":{"new":{"labels":[[1,"01 · Raw sugar melter"],[2,"02 · Melt liquor tank"],[3,"03 · HPA reaction tank"],[4,"04 · Pre-filtration buffer"],[5,"05 · Membrane press filters"],[6,"06 · Filtrate storage"],[7,"07 · Bag filters"],[8,"08 · Fine liquor heater"],[9,"09 · Vacuum pan"]],"chem":["HPA · 500–800 ppm · dry powder","Spent HPA · dry cake"]},"old":{"labels":[[1,"01 · Melter and buffer"],[2,"02 · Plate heat exchanger"],[3,"03 · Acid · lime · decolorant"],[4,"04 · Aeration and flocculant"],[5,"05 · Talo clarifier"],[6,"06 · Deep bed filters"],[7,"07 · Fine liquor storage"],[8,"08 · Fine liquor heater"],[9,"09 · Vacuum pan"]],"chem":["PHOSPHORIC ACID","LIME SACCHARATE","LIQUID DECOLORANT","FLOCCULANT","FRS-W2 · 70 ppm"]}},"liq":{"raw":"#A0713C","melt":"#B07E42","hpa":"#2E2A26","dosed":"#5A4229","black":"#4A3522","filt":"#DFA948","clear":"#E9BB5C","polish":"#EDCD80","fine":"#EFDA9C","o_melt":"#A9763E","o_hot":"#B5854A","o_limed":"#8E7B4E","o_floc":"#9A8A62","o_clar":"#D6A048","o_dbf":"#E0B25A","o_fine":"#E9C87E","o_mud":"#544631","o_scum":"#8C7A59","c_acid":"#BFDCEC","c_lime":"#EFEADB","c_decol":"#4E3520","c_flocc":"#CBDDE4","c_air":"#BFE2F5","c_frs":"#D8CDA8"},"render":{"fin":"brushed","ao":"0","bloom":"1","exp":"83","refl":"48","tone":"57","steel":"#f2f2f2","grad":0.94,"swap":"1","hdri":""},"rec":{"res":"1920","sec":"6","cap":"1","scope":"story","sub":"1"},"vop":{"click":true,"cap":true,"scope":"story","vol":1,"gap":0.8}}</script>
 <script>window.__PAGE_SRC='<!DOCTYPE html>\n'+document.documentElement.outerHTML;</script></body></html>
